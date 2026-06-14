@@ -9,10 +9,10 @@
   <link rel="canonical" href="https://guns0911.github.io/quicktools/pdf.html" />
   <meta name="robots" content="index, follow" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%2316a34a'/><path d='M13 4 6 13h5l-1 7 8-11h-5l1-5z' fill='white'/></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230d9488'/><path d='M13 4 6 13h5l-1 7 8-11h-5l1-5z' fill='white'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -49,7 +49,7 @@
       </div>
 
       <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload files">
-        <div class="dz-icon">📄</div>
+        <div class="dz-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 9 5-5 5 5"/><path d="M12 4v12"/></svg></div>
         <p><strong>Drag files here</strong> or click to select</p>
         <p class="dz-hint" id="dzHint">Select two or more PDF files</p>
         <input type="file" id="fileInput" accept="application/pdf" multiple hidden />
@@ -58,7 +58,7 @@
       <ul id="fileList" class="results" style="list-style:none;padding:0;"></ul>
 
       <div id="actions" class="actions hidden">
-        <button id="runBtn" class="btn btn-primary">Create PDF</button>
+        <button id="runBtn" class="btn btn-accent">Create PDF</button>
         <button id="clearBtn" class="btn btn-ghost">Clear</button>
       </div>
 
