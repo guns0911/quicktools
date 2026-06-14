@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Compressor, Resizer & Converter — Free Online | QuickTools</title>
+  <meta name="description" content="Compress, resize and convert your images to JPG, PNG or WebP for free. Your files never leave your device — everything runs in your browser. No sign-up, no limits." />
+  <meta name="keywords" content="image compressor, compress image, resize image, jpg to png, png to webp, webp converter, free online image tool, compress photo online" />
+  <link rel="canonical" href="https://quicktools.example.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Image Compressor & Converter | QuickTools" />
+  <meta property="og:description" content="Compress and convert your images right in your browser. Your files are never uploaded to any server." />
+  <meta property="og:locale" content="en_US" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- AdSense: after approval, uncomment below and set your PUBLISHER-ID.
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+
+  <!-- Structured data (for SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "QuickTools Image Tool",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Free online image compressor, resizer and format converter."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">🛠️ Quick<span>Tools</span></a>
+      <nav class="nav">
+        <a href="/">Image Tool</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Image Compressor, Resizer & Converter</h1>
+      <p class="subtitle">
+        Shrink, resize and convert your photos to <strong>JPG / PNG / WebP</strong> in seconds.
+        Everything runs <strong>in your browser</strong> — your files are never uploaded to any
+        server. No sign-up, no limits, completely free.
+      </p>
+    </section>
+
+    <!-- TOP AD SLOT (fill in after AdSense approval) -->
+    <div class="ad-slot" aria-hidden="true"><span>Ad space</span></div>
+
+    <section class="tool" aria-label="Image tool">
+      <!-- Settings -->
+      <div class="controls">
+        <div class="control">
+          <label for="mode">Operation</label>
+          <select id="mode">
+            <option value="compress">Compress (reduce file size)</option>
+            <option value="resize">Resize (width/height)</option>
+            <option value="convert">Convert format</option>
+          </select>
+        </div>
+
+        <div class="control" data-show="compress convert">
+          <label for="format">Output format</label>
+          <select id="format">
+            <option value="image/jpeg">JPG</option>
+            <option value="image/png">PNG</option>
+            <option value="image/webp">WebP</option>
+          </select>
+        </div>
+
+        <div class="control" data-show="compress convert resize">
+          <label for="quality">Quality: <span id="qualityVal">80%</span></label>
+          <input type="range" id="quality" min="10" max="100" value="80" />
+        </div>
+
+        <div class="control" data-show="resize">
+          <label for="maxWidth">Max width (px)</label>
+          <input type="number" id="maxWidth" placeholder="e.g. 1280" min="1" />
+        </div>
+
+        <div class="control" data-show="resize">
+          <label for="maxHeight">Max height (px)</label>
+          <input type="number" id="maxHeight" placeholder="e.g. 720" min="1" />
+        </div>
+      </div>
+
+      <!-- Drop zone -->
+      <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload images">
+        <div class="dz-inner">
+          <div class="dz-icon">📁</div>
+          <p><strong>Drag images here</strong> or click to select</p>
+          <p class="dz-hint">JPG, PNG, WebP, GIF — you can select multiple files</p>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" multiple hidden />
+      </div>
+
+      <div id="actions" class="actions hidden">
+        <button id="processBtn" class="btn btn-primary">Process</button>
+        <button id="downloadAllBtn" class="btn" disabled>Download all</button>
+        <button id="clearBtn" class="btn btn-ghost">Clear</button>
+      </div>
+
+      <div id="results" class="results"></div>
+    </section>
+
+    <!-- MID AD SLOT -->
+    <div class="ad-slot" aria-hidden="true"><span>Ad space</span></div>
+
+    <!-- SEO content -->
+    <section class="content">
+      <h2>How to compress an image</h2>
+      <p>
+        Drag your images into the box above, click “Process”, then download the result.
+        QuickTools does all the work inside your browser, so your images are never uploaded
+        to the internet and your <strong>privacy stays protected</strong>. Perfect for
+        shrinking large photos for websites, email attachments and social media.
+      </p>
+
+      <h2>Which format should I choose?</h2>
+      <ul>
+        <li><strong>JPG:</strong> The most common choice for photos, small file size.</li>
+        <li><strong>PNG:</strong> Best for transparent backgrounds and sharp graphics.</li>
+        <li><strong>WebP:</strong> Smallest size for the modern web with high quality.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Are my images uploaded anywhere?</summary>
+          <p>No. All processing happens on your device, inside your browser. Your files are never sent to any server.</p>
+        </details>
+        <details>
+          <summary>How many images can I process?</summary>
+          <p>No limit. You can select multiple images at once and process them in a batch.</p>
+        </details>
+        <details>
+          <summary>Is it free?</summary>
+          <p>Completely free. No account or sign-up required.</p>
+        </details>
+        <details>
+          <summary>Does it work on mobile?</summary>
+          <p>Yes. It works smoothly in mobile browsers too.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> QuickTools — Free online image tools.</p>
+      <p class="footer-links">
+        <a href="about.html">About</a> ·
+        <a href="privacy.html">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
