@@ -1,7 +1,7 @@
-# QuickTools — Free Online Image Tool
+# QuickTools — Free Online Tools
 
-A browser-based (serverless) image compressor, resizer and format converter.
-Built for passive income via free hosting + Google AdSense.
+A browser-based (serverless) multi-tool site: image compressor/converter, QR code
+generator and PDF tools. Built for passive income via free hosting + Google AdSense.
 
 - **Cost:** $0 (free hosting, no API, no server)
 - **Tech:** Plain HTML + CSS + JavaScript (no build step)
@@ -73,13 +73,16 @@ Ad revenue comes from visitors. To rank:
 ## File structure
 
 ```
-index.html      → Home page + image tool
-app.js          → Image processing logic (in-browser)
-styles.css      → Styling
+index.html      → Home page (hero + tool grid)
+image.html      → Image compressor/resizer/converter  (image.js)
+qr.html         → QR code generator                    (qr.js, uses qrcode CDN)
+pdf.html        → PDF merge + images-to-PDF            (pdf.js, uses pdf-lib CDN)
+common.js       → Shared helpers (year, active nav)
+styles.css      → Design system (light theme)
 about.html      → About page (required for AdSense)
 privacy.html    → Privacy policy (required for AdSense)
 robots.txt      → Search engine rules
-sitemap.xml     → Sitemap (update to your live address)
+sitemap.xml     → Sitemap
 ```
 
 > Before publishing, replace `quicktools.example.com` in `index.html`, `sitemap.xml`

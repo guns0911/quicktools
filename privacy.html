@@ -4,18 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | QuickTools</title>
-  <meta name="description" content="QuickTools privacy policy. Your images never leave your device; all processing happens in your browser." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>" />
+  <meta name="description" content="QuickTools privacy policy. Your files never leave your device; all processing happens in your browser." />
+  <link rel="canonical" href="https://guns0911.github.io/quicktools/privacy.html" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%2316a34a'/><path d='M13 4 6 13h5l-1 7 8-11h-5l1-5z' fill='white'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="./">🛠️ Quick<span>Tools</span></a>
+      <a class="logo" href="./">
+        <span class="mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 13h6l-1 9 9-12h-6l1-8z"/></svg></span>
+        Quick<span>Tools</span>
+      </a>
       <nav class="nav">
-        <a href="./">Image Tool</a>
+        <a href="image.html">Image</a>
+        <a href="qr.html">QR Code</a>
+        <a href="pdf.html">PDF</a>
         <a href="about.html">About</a>
-        <a href="privacy.html">Privacy</a>
       </nav>
     </div>
   </header>
@@ -24,12 +32,11 @@
     <h1>Privacy Policy</h1>
     <p>Last updated: 2026</p>
 
-    <h2>Where do your images go?</h2>
+    <h2>Where do your files go?</h2>
     <p>
-      Nowhere. All image processing on QuickTools (compression, resizing, format conversion)
-      happens entirely <strong>in your browser</strong>, on your own device. The files you
-      upload are <strong>never sent</strong> to our servers or any third party, and they are
-      not stored or saved anywhere.
+      Nowhere. All processing on QuickTools (image compression, QR generation, PDF merging)
+      happens entirely <strong>in your browser</strong>, on your own device. The files you use are
+      <strong>never sent</strong> to our servers or any third party, and they are not stored anywhere.
     </p>
 
     <h2>Data we collect</h2>
@@ -38,13 +45,18 @@
       anonymous visit statistics (such as page views) to improve the site.
     </p>
 
+    <h2>Third-party libraries</h2>
+    <p>
+      Some tools load open-source libraries (for QR codes and PDFs) from a public CDN to run in
+      your browser. These libraries process your data locally and do not transmit your files.
+    </p>
+
     <h2>Cookies and ads</h2>
     <p>
-      This site may use third-party advertising services such as Google AdSense. Google and
-      its partners may use cookies to show ads relevant to your interests. To learn more about
-      how Google uses advertising cookies and to opt out of personalized ads, visit the
-      <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">
-      Google Ad Settings</a> page.
+      This site may use third-party advertising services such as Google AdSense. Google and its
+      partners may use cookies to show ads relevant to your interests. To learn more and opt out of
+      personalized ads, visit the
+      <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ad Settings</a> page.
     </p>
 
     <h2>Contact</h2>
@@ -54,10 +66,16 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> QuickTools</p>
+    <div class="container footer-inner">
+      <span>© <span data-year></span> QuickTools — Free online tools.</span>
+      <span class="footer-links">
+        <a href="image.html">Image</a>
+        <a href="qr.html">QR Code</a>
+        <a href="pdf.html">PDF</a>
+        <a href="privacy.html">Privacy</a>
+      </span>
     </div>
   </footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="common.js"></script>
 </body>
 </html>

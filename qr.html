@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free QR Code Generator — Text & URL to QR | QuickTools</title>
+  <meta name="description" content="Generate a QR code from any text or link for free. Customize colors and size, then download as PNG or SVG. Runs entirely in your browser." />
+  <meta name="keywords" content="qr code generator, free qr code, url to qr, text to qr, qr code maker, download qr code png svg" />
+  <link rel="canonical" href="https://guns0911.github.io/quicktools/qr.html" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%2316a34a'/><path d='M13 4 6 13h5l-1 7 8-11h-5l1-5z' fill='white'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./">
+        <span class="mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 13h6l-1 9 9-12h-6l1-8z"/></svg></span>
+        Quick<span>Tools</span>
+      </a>
+      <nav class="nav">
+        <a href="image.html">Image</a>
+        <a href="qr.html">QR Code</a>
+        <a href="pdf.html">PDF</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tool-head">
+      <h1>QR Code Generator</h1>
+      <p>Turn any text or link into a QR code. Customize the colors and size, then download it instantly.</p>
+    </div>
+
+    <div class="ad-slot" aria-hidden="true"><span>Ad space</span></div>
+
+    <section class="panel" aria-label="QR code generator">
+      <div class="control" style="margin-bottom:16px;">
+        <label for="qrText">Text or URL</label>
+        <textarea id="qrText" placeholder="https://example.com or any text">https://guns0911.github.io/quicktools/</textarea>
+      </div>
+
+      <div class="controls">
+        <div class="control">
+          <label for="qrSize">Size: <span id="qrSizeVal">300px</span></label>
+          <input type="range" id="qrSize" min="120" max="1000" step="20" value="300" />
+        </div>
+        <div class="control">
+          <label for="qrEcc">Error correction</label>
+          <select id="qrEcc">
+            <option value="L">Low (more data)</option>
+            <option value="M" selected>Medium</option>
+            <option value="Q">Quartile</option>
+            <option value="H">High (most robust)</option>
+          </select>
+        </div>
+        <div class="control">
+          <label for="qrFg">Foreground</label>
+          <input type="color" id="qrFg" value="#14271c" />
+        </div>
+        <div class="control">
+          <label for="qrBg">Background</label>
+          <input type="color" id="qrBg" value="#ffffff" />
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="downloadPng" class="btn btn-primary" disabled>Download PNG</button>
+        <button id="downloadSvg" class="btn" disabled>Download SVG</button>
+      </div>
+
+      <div class="qr-output">
+        <div class="qr-frame"><canvas id="qrCanvas"></canvas></div>
+        <p id="qrError" class="muted" style="color:var(--danger)"></p>
+      </div>
+    </section>
+
+    <div class="ad-slot" aria-hidden="true"><span>Ad space</span></div>
+
+    <section class="content">
+      <h2>How to make a QR code</h2>
+      <p>Type or paste your text or link above. The QR code updates automatically. Pick your colors and size, then download it as a PNG image or a scalable SVG. Everything is generated in your browser — nothing is sent to a server.</p>
+      <h2>What can I put in a QR code?</h2>
+      <ul>
+        <li><strong>A website link</strong> for posters, menus or business cards.</li>
+        <li><strong>Plain text</strong>, a phone number or an email address.</li>
+        <li><strong>Wi-Fi or contact details</strong> in the right text format.</li>
+      </ul>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details><summary>Do the QR codes expire?</summary><p>No. These are static QR codes — they work forever and contain the data directly.</p></details>
+        <details><summary>Is it free for commercial use?</summary><p>Yes. The QR codes you create are yours to use anywhere.</p></details>
+        <details><summary>Which format should I download?</summary><p>Use PNG for quick sharing, SVG for print or large sizes (it stays sharp at any scale).</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year></span> QuickTools — Free online tools.</span>
+      <span class="footer-links">
+        <a href="image.html">Image</a>
+        <a href="qr.html">QR Code</a>
+        <a href="pdf.html">PDF</a>
+        <a href="privacy.html">Privacy</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+  <script src="common.js"></script>
+  <script src="qr.js"></script>
+</body>
+</html>

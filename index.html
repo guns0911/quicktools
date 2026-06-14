@@ -3,171 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Compressor, Resizer & Converter — Free Online | QuickTools</title>
-  <meta name="description" content="Compress, resize and convert your images to JPG, PNG or WebP for free. Your files never leave your device — everything runs in your browser. No sign-up, no limits." />
-  <meta name="keywords" content="image compressor, compress image, resize image, jpg to png, png to webp, webp converter, free online image tool, compress photo online" />
+  <title>QuickTools — Free Online Tools for Images, QR Codes & PDFs</title>
+  <meta name="description" content="Free, fast and private online tools: compress and convert images, generate QR codes, merge PDFs. Everything runs in your browser — no uploads, no sign-up." />
+  <meta name="keywords" content="online tools, free tools, image compressor, qr code generator, merge pdf, image converter, browser tools" />
   <link rel="canonical" href="https://guns0911.github.io/quicktools/" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Free Image Compressor & Converter | QuickTools" />
-  <meta property="og:description" content="Compress and convert your images right in your browser. Your files are never uploaded to any server." />
+  <meta property="og:title" content="QuickTools — Free Online Tools" />
+  <meta property="og:description" content="Compress images, generate QR codes and merge PDFs right in your browser. Private and free." />
   <meta property="og:locale" content="en_US" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%2316a34a'/><path d='M13 4 6 13h5l-1 7 8-11h-5l1-5z' fill='white'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- AdSense: after approval, uncomment below and set your PUBLISHER-ID.
+  <!-- AdSense: after approval, uncomment and set your PUBLISHER-ID.
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
   -->
-
-  <!-- Structured data (for SEO) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "QuickTools Image Tool",
-    "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "Web",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "description": "Free online image compressor, resizer and format converter."
+    "@type": "WebSite",
+    "name": "QuickTools",
+    "url": "https://guns0911.github.io/quicktools/",
+    "description": "Free online tools for images, QR codes and PDFs."
   }
   </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="./">🛠️ Quick<span>Tools</span></a>
+      <a class="logo" href="./">
+        <span class="mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 13h6l-1 9 9-12h-6l1-8z"/></svg></span>
+        Quick<span>Tools</span>
+      </a>
       <nav class="nav">
-        <a href="./">Image Tool</a>
+        <a href="image.html">Image</a>
+        <a href="qr.html">QR Code</a>
+        <a href="pdf.html">PDF</a>
         <a href="about.html">About</a>
-        <a href="privacy.html">Privacy</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Image Compressor, Resizer & Converter</h1>
+  <main>
+    <section class="container hero">
+      <span class="eyebrow">100% in your browser · free</span>
+      <h1>Simple online tools that <span class="hl">respect your privacy</span></h1>
       <p class="subtitle">
-        Shrink, resize and convert your photos to <strong>JPG / PNG / WebP</strong> in seconds.
-        Everything runs <strong>in your browser</strong> — your files are never uploaded to any
-        server. No sign-up, no limits, completely free.
+        Compress images, generate QR codes and merge PDFs in seconds. No uploads,
+        no sign-up, no limits — your files never leave your device.
       </p>
+      <div class="cta-row">
+        <a href="image.html" class="btn btn-primary btn-lg">Compress an image</a>
+        <a href="qr.html" class="btn btn-lg">Generate a QR code</a>
+      </div>
     </section>
 
-    <!-- TOP AD SLOT (fill in after AdSense approval) -->
-    <div class="ad-slot" aria-hidden="true"><span>Ad space</span></div>
-
-    <section class="tool" aria-label="Image tool">
-      <!-- Settings -->
-      <div class="controls">
-        <div class="control">
-          <label for="mode">Operation</label>
-          <select id="mode">
-            <option value="compress">Compress (reduce file size)</option>
-            <option value="resize">Resize (width/height)</option>
-            <option value="convert">Convert format</option>
-          </select>
-        </div>
-
-        <div class="control" data-show="compress convert">
-          <label for="format">Output format</label>
-          <select id="format">
-            <option value="image/jpeg">JPG</option>
-            <option value="image/png">PNG</option>
-            <option value="image/webp">WebP</option>
-          </select>
-        </div>
-
-        <div class="control" data-show="compress convert resize">
-          <label for="quality">Quality: <span id="qualityVal">80%</span></label>
-          <input type="range" id="quality" min="10" max="100" value="80" />
-        </div>
-
-        <div class="control" data-show="resize">
-          <label for="maxWidth">Max width (px)</label>
-          <input type="number" id="maxWidth" placeholder="e.g. 1280" min="1" />
-        </div>
-
-        <div class="control" data-show="resize">
-          <label for="maxHeight">Max height (px)</label>
-          <input type="number" id="maxHeight" placeholder="e.g. 720" min="1" />
+    <section class="container section">
+      <h2 class="section-title">Choose a tool</h2>
+      <p class="section-sub">More tools are added regularly.</p>
+      <div class="tool-grid">
+        <a class="tool-card" href="image.html">
+          <div class="ticon">🖼️</div>
+          <h3>Image Compressor</h3>
+          <p>Shrink, resize and convert photos to JPG, PNG or WebP.</p>
+          <span class="go">Open tool →</span>
+        </a>
+        <a class="tool-card" href="qr.html">
+          <div class="ticon">🔳</div>
+          <h3>QR Code Generator</h3>
+          <p>Turn any text or link into a downloadable QR code.</p>
+          <span class="go">Open tool →</span>
+        </a>
+        <a class="tool-card" href="pdf.html">
+          <div class="ticon">📄</div>
+          <h3>PDF Tools</h3>
+          <p>Merge PDFs or turn your images into a single PDF.</p>
+          <span class="go">Open tool →</span>
+        </a>
+        <div class="tool-card soon">
+          <span class="badge-soon">Soon</span>
+          <div class="ticon">✂️</div>
+          <h3>More coming</h3>
+          <p>Text tools, color tools and more on the way.</p>
         </div>
       </div>
-
-      <!-- Drop zone -->
-      <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Upload images">
-        <div class="dz-inner">
-          <div class="dz-icon">📁</div>
-          <p><strong>Drag images here</strong> or click to select</p>
-          <p class="dz-hint">JPG, PNG, WebP, GIF — you can select multiple files</p>
-        </div>
-        <input type="file" id="fileInput" accept="image/*" multiple hidden />
-      </div>
-
-      <div id="actions" class="actions hidden">
-        <button id="processBtn" class="btn btn-primary">Process</button>
-        <button id="downloadAllBtn" class="btn" disabled>Download all</button>
-        <button id="clearBtn" class="btn btn-ghost">Clear</button>
-      </div>
-
-      <div id="results" class="results"></div>
     </section>
 
-    <!-- MID AD SLOT -->
-    <div class="ad-slot" aria-hidden="true"><span>Ad space</span></div>
+    <section class="section alt">
+      <div class="container">
+        <h2 class="section-title">Why QuickTools?</h2>
+        <p class="section-sub">Built to be fast, private and genuinely free.</p>
+        <div class="features">
+          <div class="feature">
+            <div class="fi">🔒</div>
+            <h4>Private by design</h4>
+            <p>Files are processed on your device and never uploaded.</p>
+          </div>
+          <div class="feature">
+            <div class="fi">⚡</div>
+            <h4>Instant</h4>
+            <p>No waiting in queues — results appear right away.</p>
+          </div>
+          <div class="feature">
+            <div class="fi">🆓</div>
+            <h4>Free forever</h4>
+            <p>No account, no watermarks, no usage limits.</p>
+          </div>
+          <div class="feature">
+            <div class="fi">📱</div>
+            <h4>Works everywhere</h4>
+            <p>Desktop, tablet and phone — right in the browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- SEO content -->
-    <section class="content">
-      <h2>How to compress an image</h2>
-      <p>
-        Drag your images into the box above, click “Process”, then download the result.
-        QuickTools does all the work inside your browser, so your images are never uploaded
-        to the internet and your <strong>privacy stays protected</strong>. Perfect for
-        shrinking large photos for websites, email attachments and social media.
-      </p>
-
-      <h2>Which format should I choose?</h2>
-      <ul>
-        <li><strong>JPG:</strong> The most common choice for photos, small file size.</li>
-        <li><strong>PNG:</strong> Best for transparent backgrounds and sharp graphics.</li>
-        <li><strong>WebP:</strong> Smallest size for the modern web with high quality.</li>
-      </ul>
-
+    <section class="container content">
       <h2>Frequently Asked Questions</h2>
       <div class="faq">
         <details>
-          <summary>Are my images uploaded anywhere?</summary>
-          <p>No. All processing happens on your device, inside your browser. Your files are never sent to any server.</p>
+          <summary>Are my files uploaded to a server?</summary>
+          <p>No. Every tool runs entirely in your browser, so your files stay on your device.</p>
         </details>
         <details>
-          <summary>How many images can I process?</summary>
-          <p>No limit. You can select multiple images at once and process them in a batch.</p>
+          <summary>Do I need to sign up?</summary>
+          <p>Never. All tools are free to use without any account.</p>
         </details>
         <details>
-          <summary>Is it free?</summary>
-          <p>Completely free. No account or sign-up required.</p>
-        </details>
-        <details>
-          <summary>Does it work on mobile?</summary>
-          <p>Yes. It works smoothly in mobile browsers too.</p>
+          <summary>Is there a file size or count limit?</summary>
+          <p>No artificial limits — only what your device can handle.</p>
         </details>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> QuickTools — Free online image tools.</p>
-      <p class="footer-links">
-        <a href="about.html">About</a> ·
-        <a href="privacy.html">Privacy Policy</a>
-      </p>
+    <div class="container footer-inner">
+      <span>© <span data-year></span> QuickTools — Free online tools.</span>
+      <span class="footer-links">
+        <a href="image.html">Image</a>
+        <a href="qr.html">QR Code</a>
+        <a href="pdf.html">PDF</a>
+        <a href="privacy.html">Privacy</a>
+      </span>
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="common.js"></script>
 </body>
 </html>

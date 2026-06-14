@@ -20,8 +20,6 @@
   let files = [];      // selected original File objects
   let processed = [];  // { name, blob, url, originalSize }
 
-  $("year").textContent = new Date().getFullYear();
-
   // --- Control visibility (show/hide fields based on operation) ---
   function updateControlVisibility() {
     const mode = modeSel.value;
