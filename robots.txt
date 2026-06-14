@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://quicktools.example.com/sitemap.xml
+Sitemap: https://guns0911.github.io/quicktools/sitemap.xml
